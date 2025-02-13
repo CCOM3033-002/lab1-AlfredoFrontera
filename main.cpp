@@ -25,3 +25,20 @@ cin >> adultTickets;
 cout << "Enter the amount of child tickets sold: ";
 cin >> childTickets;
 
+double grossProfit = adultTickets * ADULT_TICKET_PRICE + childTickets * CHILD_TICKET_PRICE;
+double netProfit = grossProfit * THEATER_PERCENTAGE;
+double distributorProfit = grossProfit - netProfit;
+
+cout << endl;
+cout << left << setw(30) << "Movie Name:" << right << "\"" << movieName << "\"" << endl;
+cout << left << setw(30) << "Adult Tickets Sold:" << right << setw(10) << adultTickets << endl;
+cout << left << setw(30) << "Child Tickets Sold:" << right << setw(10) << childTickets << endl;
+
+cout << fixed << showpoint << setprecision(2);
+cout << left << setw(30) << "Gross Box Office Profit:" << right << "$" << setw(10) << grossProfit << endl;
+cout << left << setw(30) << "Net Box Office Profit:" << right << "$" << setw(10) << netProfit << endl;
+cout << left << setw(30) << "Amount Paid to Distributor:" << right << "$" << setw(10) << distributorProfit << endl;
+
+return 0;
+}
+
